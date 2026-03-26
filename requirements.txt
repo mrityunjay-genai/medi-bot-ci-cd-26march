@@ -1,0 +1,32 @@
+# Web Framework
+Flask==3.1.3
+Werkzeug==3.1.7
+
+# Core LangChain Framework (v1.2.x / v0.3.x logic)
+langchain==1.2.13
+langchain-core==1.2.22
+langchain-community==0.4.1
+langchain-classic==1.0.3
+langchain-text-splitters==1.1.1
+
+# Model & Vector Store Integrations
+langchain-groq==1.1.2
+langchain-pinecone==0.2.13
+langchain-huggingface==1.2.1
+langchain-openai==1.1.12
+
+# Embeddings & Heavy Lift Dependencies
+sentence-transformers==5.3.0
+transformers==4.57.6
+huggingface_hub==0.36.2
+torch==2.11.0
+
+# Database & Document Loaders
+pinecone-client==5.0.1
+pypdf==6.9.2
+
+# Utilities
+python-dotenv==1.1.1
+pydantic==2.11.8
+requests==2.32.5
+-e .
