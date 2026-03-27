@@ -1,5 +1,13 @@
 # End-to-end-Medical-Chatbot-Generative-AI
 
+## Comands to run Local Docker
+```bash
+docker build -t medical-chatbot .
+```
+	- docker build --no-cache -t medical-chatbot .
+```bash
+docker run -p 8080:8080 --env-file .env medical-chatbot
+```
 
 # How to run?
 ### STEPS:
@@ -92,7 +100,7 @@ open up localhost:
 
 	
 ## 3. Create ECR repo to store/save docker image
-    - Save the URI: 991452971713.dkr.ecr.us-east-1.amazonaws.com/ecr-medibot
+    - Save the URI: 991452971713.dkr.ecr.us-east-1.amazonaws.com/ecr_medibot
 
 	
 ## 4. Create EC2 machine (Ubuntu) 
