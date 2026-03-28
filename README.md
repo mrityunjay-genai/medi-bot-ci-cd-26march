@@ -147,6 +147,7 @@ open up localhost:
    - OPENAI_API_KEY / GROQ_API_KEY
 
 copilot added
+new secrets added
 ------
 
     
