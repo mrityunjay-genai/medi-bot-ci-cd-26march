@@ -93,8 +93,8 @@ jobs:
 
           MESSAGE="$ICON *Deployment Update*%0A*Repo:* $REPO%0A*Status:* $STATUS%0A*Commit:* $COMMIT_MSG"
           
-          # Fixed the URL structure below
-          curl -s -X POST "https://api.telegram.org{{ secrets.TELEGRAM_TOKEN }}/sendMessage" \
+          # Fixed URL with /bot prefix and proper secret interpolation
+          curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendMessage" \
             -d "chat_id=${{ secrets.TELEGRAM_CHAT_ID }}" \
             -d "text=$MESSAGE" \
             -d "parse_mode=Markdown"
