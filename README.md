@@ -73,6 +73,26 @@ open up localhost:
 
 ## 2. Create IAM user for deployment
 
+	#Policy:
+
+	1. AmazonEC2ContainerRegistryFullAccess
+
+	2. AmazonEC2FullAccess
+
+	User -> Security Credentials -> Access keys -> Create access key -> cli -> download csv file
+
+	
+## 3. Create ECR repo to store/save docker image
+    - Save the URI: 991452971713.dkr.ecr.us-east-1.amazonaws.com/ecr_medibot-28march
+
+	
+## 4. Create EC2 machine (Ubuntu) 
+	## MAchine Config steps/requirement
+	- Region -> us-east-1
+	- Instance Type -> m7i-flex.large
+	- Key Pair - RSA ->.pem
+	- Firewall (security groups) -> ALL Check
+	- Configure storage -> 50gb required
 	#with specific access
 
 	1. EC2 access : It is virtual machine
@@ -91,19 +111,6 @@ open up localhost:
 	4. Pull Your image from ECR in EC2
 
 	5. Lauch your docker image in EC2
-
-	#Policy:
-
-	1. AmazonEC2ContainerRegistryFullAccess
-
-	2. AmazonEC2FullAccess
-
-	
-## 3. Create ECR repo to store/save docker image
-    - Save the URI: 991452971713.dkr.ecr.us-east-1.amazonaws.com/ecr_medibot
-
-	
-## 4. Create EC2 machine (Ubuntu) 
 
 ## 5. Open EC2 and Install docker in EC2 Machine:
 	
