@@ -73,3 +73,28 @@ jobs:
           
           # 3. Clean up dangling images to prevent disk space issues on EC2
           docker image prune -f
+
+  Notifications:
+    needs: Continuous-Deployment
+    runs-on: ubuntu-latest
+    if: always() # Runs regardless of whether deployment succeeded or failed
+    steps:
+      - name: Send Telegram Message
+        run: |
+          STATUS="${{ needs.Continuous-Deployment.result }}"
+          REPO="${{ github.repository }}"
+          COMMIT_MSG="${{ github.event.head_commit.message }}"
+          
+          if [ "$STATUS" = "success" ]; then
+            ICON="✅"
+          else
+            ICON="❌"
+          fi
+
+          # Format message for Telegram
+          MESSAGE="$ICON *Deployment Update*%0A*Repo:* $REPO%0A*Status:* $STATUS%0A*Commit:* $COMMIT_MSG"
+          
+          curl -s -X POST "https://api.telegram.org{{ secrets.TELEGRAM_TOKEN }}/sendMessage" \
+            -d "chat_id=${{ secrets.TELEGRAM_CHAT_ID }}" \
+            -d "text=$MESSAGE" \
+            -d "parse_mode=Markdown"
