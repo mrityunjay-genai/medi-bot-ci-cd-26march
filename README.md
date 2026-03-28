@@ -146,8 +146,9 @@ open up localhost:
    - PINECONE_API_KEY
    - OPENAI_API_KEY / GROQ_API_KEY
 
-copilot added
-new secrets added
+# 8. Setup Telegram Notification
+	- Telegram notification added on CI/CD sucess or failure	 
+
 ------
 
     
