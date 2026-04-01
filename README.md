@@ -151,7 +151,8 @@ open up localhost:
 # 8. Setup Telegram Notification
 	- Telegram notification added on CI/CD 
 	- It will give me notification on status of sucess or failure
-	---	 
+	---	
+	--- 
 
 ------
 
