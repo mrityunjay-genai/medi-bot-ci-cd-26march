@@ -83,7 +83,7 @@ open up localhost:
 
 	
 ## 3. Create ECR repo to store/save docker image
-    - Save the URI: 991452971713.dkr.ecr.us-east-1.amazonaws.com/ecr_medibot-28march
+    - Save the URI: 991452971713.dkr.ecr.us-east-1.amazonaws.com/ecr_medibot-1aprl
 
 	
 ## 4. Create EC2 machine (Ubuntu) 
@@ -145,10 +145,13 @@ open up localhost:
    - ECR_REPO
    - PINECONE_API_KEY
    - OPENAI_API_KEY / GROQ_API_KEY
+   - TELEGRAM_TOKEN
+   - TELEGRAM_CHAT_ID
 
 # 8. Setup Telegram Notification
 	- Telegram notification added on CI/CD 
-	- It will give me notification on status of sucess or failure	 
+	- It will give me notification on status of sucess or failure
+	---	 
 
 ------
 
