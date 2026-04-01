@@ -83,7 +83,7 @@ open up localhost:
 
 	
 ## 3. Create ECR repo to store/save docker image
-    - Save the URI: 991452971713.dkr.ecr.us-east-1.amazonaws.com/ecr_medibot-1aprl
+    - Save the URI: 991452971713.dkr.ecr.us-east-1.amazonaws.com/ecr_medibot_1_april
 
 	
 ## 4. Create EC2 machine (Ubuntu) 
@@ -153,6 +153,7 @@ open up localhost:
 	- It will give me notification on status of sucess or failure
 	---	
 	--- 
+	-----
 
 ------
 
