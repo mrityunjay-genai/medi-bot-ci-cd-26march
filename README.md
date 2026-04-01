@@ -147,7 +147,8 @@ open up localhost:
    - OPENAI_API_KEY / GROQ_API_KEY
 
 # 8. Setup Telegram Notification
-	- Telegram notification added on CI/CD sucess or failure	 
+	- Telegram notification added on CI/CD 
+	- It will give me notification on status of sucess or failure	 
 
 ------
 
